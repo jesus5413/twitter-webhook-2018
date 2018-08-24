@@ -1,5 +1,5 @@
 applications:
-  - name: webhook-ibmvault
+  - name: your-app-name
     memory: 128M
     command: node server.js
     buildpack: https://github.com/cloudfoundry/nodejs-buildpack
