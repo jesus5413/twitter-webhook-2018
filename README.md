@@ -8,7 +8,30 @@ I've tried to use **[`this example`](https://github.com/super-ienien/twitter-web
 
 1. Rename `.env.example` to `.env` and fill the values (duh).
 2. `npm i`
-3. Push your app (Heroku, now... IBM Cloud 😏)
+3. Un-comment from line 62 to 66
+
+```
+userActivityWebhook
+  .register()
+  .catch(({ statusCode, body }) =>
+    console.log(`.register() error ${statusCode}`, body)
+  );
+```
+
+4. Try `npm start`. If it doesn't make any errors, we are good!
+5. Comment again the lines from the point 3, and un-comment lines between 52 to 57
+
+```
+userActivityWebhook
+  .getWebhooks()
+  .then(({ environments }) => console.log(environments[0]))
+  .catch(({ statusCode, body }) =>
+    console.log(`.register() error ${statusCode}`, body)
+  );
+```
+
+5. Same as 4, if works, comment again.
+6. Push your app (Heroku, now... IBM Cloud 😏)
 
 ### ❗️IMPORTANT❗️
 
