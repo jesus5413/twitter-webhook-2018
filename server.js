@@ -100,7 +100,8 @@ userActivityWebhook.on("event", (event, userId, data) => {
       console.log(`[USER-EVENT] anything else: ${event}`);
       break;
   }
-  return console.log("data", data);
+  // DEBUG
+  // return console.log("data", data);
 });
 
 //listen to unknown payload (in case of api new features)
