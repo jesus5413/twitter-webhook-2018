@@ -84,6 +84,7 @@ userActivityWebhook.on("event", (event, userId, data) => {
       break;
     case "direct_message":
       console.log(`[USER-EVENT]: direct message!`);
+      sendMessage(data);
       // TODO
       break;
 
@@ -106,5 +107,12 @@ userActivityWebhook.on("event", (event, userId, data) => {
 
 //listen to unknown payload (in case of api new features)
 userActivityWebhook.on("unknown-event", rawData => console.log(rawData));
+
+function sendMessage(data){
+  console.log(data);
+}
+
+
+
 
 app.listen(process.env.PORT || 8000);

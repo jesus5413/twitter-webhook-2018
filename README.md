@@ -18,7 +18,7 @@ userActivityWebhook
   );
 ```
 
-4. Try `npm start`. If it doesn't make any errors, we are good!
+4. Try `nodemon server.js`. If it doesn't make any errors, we are good!
 5. Comment again the lines from the point 3, and un-comment lines between 52 to 57
 
 ```
